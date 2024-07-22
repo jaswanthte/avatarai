@@ -10,6 +10,6 @@ module.exports = {
     "^microsoft-cognitiveservices-speech-sdk$": "<rootDir>/src/__mocks__/microsoft-cognitiveservices-speech-sdk.js"
   },
   testMatch: [
-    "**/src/**/*.test.js" // Match test files in src
+    "**/src/**/*.test.js" // Match test files directly in src
   ],
 };
