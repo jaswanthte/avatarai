@@ -1,12 +1,8 @@
 module.exports = {
-    transformIgnorePatterns: [
-      "/node_modules/(?!(microsoft-cognitiveservices-speech-sdk)/)"
-    ],
-    transform: {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
-    },
-    moduleNameMapper: {
-      "\\.css$": "identity-obj-proxy"
-    }
-  };
-  
+  transformIgnorePatterns: [
+    "node_modules/(?!(microsoft-cognitiveservices-speech-sdk)/)"
+  ],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+  }
+};
