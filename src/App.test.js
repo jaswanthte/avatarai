@@ -1,11 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-// Ensure the test is meaningful and the text 'learn react' is indeed present in the component
-test('renders learn react link', () => {
+test('renders Techenhance AI Assistant Avatar header', () => {
   render(<App />);
-  // Use a more descriptive message for debugging
-  const linkElement = screen.getByText(/learn react/i);
-  // Assertion to check if the element is in the document
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = screen.getByText(/Techenhance AI Assistant Avatar/i);
+  expect(headerElement).toBeInTheDocument();
+});
+
+test('renders chatbox textarea', () => {
+  render(<App />);
+  const textareaElement = screen.getByPlaceholderText(/Type your message here.../i);
+  expect(textareaElement).toBeInTheDocument();
+});
+
+test('renders send button', () => {
+  render(<App />);
+  const sendButtonElement = screen.getByText(/Send/i);
+  expect(sendButtonElement).toBeInTheDocument();
 });
