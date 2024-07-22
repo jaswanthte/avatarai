@@ -50,7 +50,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "/node_modules/(?!(microsoft-cognitiveservices-speech-sdk)/)"
+      "/node_modules/(?!(axios|microsoft-cognitiveservices-speech-sdk)/)"
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"

@@ -1,7 +1,6 @@
-// jest.config.js
 module.exports = {
   transformIgnorePatterns: [
-    "node_modules/(?!(microsoft-cognitiveservices-speech-sdk)/)"
+    "node_modules/(?!(axios|microsoft-cognitiveservices-speech-sdk)/)"
   ],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
@@ -10,6 +9,7 @@ module.exports = {
     "^microsoft-cognitiveservices-speech-sdk$": "<rootDir>/src/__mocks__/microsoft-cognitiveservices-speech-sdk.js"
   },
   testMatch: [
-    "**/src/**/*.test.js" // Match test files directly in src
+    "**/src/**/*.test.js" // Match test files in src
   ],
+  testEnvironment: "jsdom", // Add this to handle DOM-related tests
 };
